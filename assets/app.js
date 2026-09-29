@@ -51,6 +51,7 @@ const state = {
   kind: "all", // enemy/boss/all
   lang: "both", // both | ko | en
   data: { characters: [], enemies: [], crewmates: [] },
+  tracker: { enemies: [], crewmates: [], hand: [] },
 };
 
 const els = {};
@@ -72,6 +73,13 @@ async function boot() {
   els.modalBody = $("#modalBody");
   els.modalClose = $("#modalClose");
   els.loadError = $("#loadError");
+  els.picker = $("#picker");
+  els.pickerTitle = $("#pickerTitle");
+  els.pickerSearch = $("#pickerSearch");
+  els.pickerList = $("#pickerList");
+  els.pickerClose = $("#pickerClose");
+
+  state.tracker = loadTrackerState();
 
   try {
     const [characters, enemies, crewmates] = await Promise.all([
@@ -118,6 +126,9 @@ function wireEvents() {
       els.tabs.forEach((b) => b.classList.toggle("active", b === btn));
       $("#episodeFilterWrap").hidden = state.tab !== "crewmates";
       $("#kindFilterWrap").hidden = state.tab !== "enemies";
+      $("#searchWrap").hidden = state.tab === "tracker";
+      $("#langWrap").hidden = state.tab === "tracker";
+      $("#legend").hidden = state.tab === "tracker";
       render();
     })
   );
@@ -149,8 +160,17 @@ function wireEvents() {
   els.modal.addEventListener("click", (e) => {
     if (e.target === els.modal) closeModal();
   });
+
+  els.pickerClose.addEventListener("click", closePicker);
+  els.picker.addEventListener("click", (e) => {
+    if (e.target === els.picker) closePicker();
+  });
+
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeModal();
+    if (e.key === "Escape") {
+      closeModal();
+      closePicker();
+    }
   });
 }
 
@@ -169,6 +189,12 @@ function matches(haystackFields, q) {
 }
 
 function render() {
+  if (state.tab === "tracker") {
+    renderTracker();
+    return;
+  }
+
+  els.results.classList.add("grid");
   const q = state.query;
   let html = "";
   let count = 0;
@@ -213,7 +239,7 @@ function render() {
 }
 
 function wireCardClicks() {
-  document.querySelectorAll(".card[data-detail]").forEach((el) => {
+  document.querySelectorAll("[data-detail]").forEach((el) => {
     el.addEventListener("click", () => {
       openModal(el.dataset.detail);
     });
@@ -232,6 +258,45 @@ function textBlock(ko, en, cls = "ability") {
   return `
     <div class="${cls}">${renderText(en)}</div>
     <div class="${cls} ${cls}-ko">${renderText(ko)}</div>
+  `;
+}
+
+function enemyDetailHTML(r) {
+  const img = `Cards/Enemies/${r.jpg_reference}`;
+  const kindBadge = r.type === "boss" ? `<span class="badge badge-boss">BOSS</span>` : `<span class="badge">ENEMY</span>`;
+  const threat = r.threat_english ? `<span class="stat">🔥 ${escapeHTML(r.threat_english)}</span>` : "";
+  const bounty = r.bounty ? `<span class="stat">${escapeHTML(fmtBounty(r.bounty))}</span>` : "";
+  const onReveal =
+    r.on_reveal_english || r.on_reveal_korean
+      ? `<h4>On Reveal</h4>${textBlock(r.on_reveal_korean, r.on_reveal_english)}`
+      : "";
+  return `
+    <img class="modal-img" src="${img}" loading="lazy">
+    <div class="modal-info">
+      ${kindBadge}
+      ${nameBlock(r.name_korean, r.name_english)}
+      <div class="stats">${threat}${bounty}</div>
+      ${onReveal}
+      <h4>Defeat Condition</h4>
+      ${textBlock(r.defeat_condition_korean, r.defeat_condition_english)}
+    </div>
+  `;
+}
+
+function crewmateDetailHTML(r) {
+  const img = `Cards/Crewmates/${r.jpg_reference}`;
+  const episode = `<span class="badge badge-episode">${escapeHTML(r.episode_english)}</span>`;
+  const power = r.power ? `<span class="stat">P${escapeHTML(r.power)}</span>` : "";
+  const notes = r.notes ? `<div class="notes">⚠ ${escapeHTML(r.notes)}</div>` : "";
+  return `
+    <img class="modal-img" src="${img}" loading="lazy">
+    <div class="modal-info">
+      ${episode} ${power}
+      ${nameBlock(r.name_korean, r.name_english)}
+      <h4>Ability</h4>
+      ${textBlock(r.ability_korean, r.ability_english)}
+      ${notes}
+    </div>
   `;
 }
 
@@ -261,23 +326,8 @@ function cardEnemy(r) {
   const kindBadge = r.type === "boss" ? `<span class="badge badge-boss">BOSS</span>` : `<span class="badge">ENEMY</span>`;
   const threat = r.threat_english ? `<span class="stat">🔥 ${escapeHTML(r.threat_english)}</span>` : "";
   const bounty = r.bounty ? `<span class="stat">${escapeHTML(fmtBounty(r.bounty))}</span>` : "";
-  const onReveal =
-    r.on_reveal_english || r.on_reveal_korean
-      ? `<h4>On Reveal</h4>${textBlock(r.on_reveal_korean, r.on_reveal_english)}`
-      : "";
-  const detail = `
-    <img class="modal-img" src="${img}" loading="lazy">
-    <div class="modal-info">
-      ${kindBadge}
-      ${nameBlock(r.name_korean, r.name_english)}
-      <div class="stats">${threat}${bounty}</div>
-      ${onReveal}
-      <h4>Defeat Condition</h4>
-      ${textBlock(r.defeat_condition_korean, r.defeat_condition_english)}
-    </div>
-  `;
   return `
-    <div class="card" data-detail="${escapeHTML(detail)}">
+    <div class="card" data-detail="${escapeHTML(enemyDetailHTML(r))}">
       ${kindBadge}
       <img class="thumb" src="${img}" loading="lazy" alt="${escapeHTML(r.name_english)}">
       <div class="card-body">
@@ -295,19 +345,8 @@ function cardCrewmate(r) {
   const badge = uncertain ? `<span class="badge badge-warn">?</span>` : "";
   const episode = `<span class="badge badge-episode">${escapeHTML(r.episode_english)}</span>`;
   const power = r.power ? `<span class="stat">P${escapeHTML(r.power)}</span>` : "";
-  const notes = r.notes ? `<div class="notes">⚠ ${escapeHTML(r.notes)}</div>` : "";
-  const detail = `
-    <img class="modal-img" src="${img}" loading="lazy">
-    <div class="modal-info">
-      ${episode} ${power}
-      ${nameBlock(r.name_korean, r.name_english)}
-      <h4>Ability</h4>
-      ${textBlock(r.ability_korean, r.ability_english)}
-      ${notes}
-    </div>
-  `;
   return `
-    <div class="card" data-detail="${escapeHTML(detail)}">
+    <div class="card" data-detail="${escapeHTML(crewmateDetailHTML(r))}">
       ${badge}
       <img class="thumb" src="${img}" loading="lazy" alt="${escapeHTML(r.name_english)}">
       <div class="card-body">
@@ -317,6 +356,257 @@ function cardCrewmate(r) {
       </div>
     </div>
   `;
+}
+
+// ---- Game Tracker -----------------------------------------------------------
+// Tracks the 3 enemy-in-play spaces, the 5 recruited-crewmate spaces, and the
+// player's hand of crewmate cards. Persisted to localStorage per browser so it
+// survives a refresh; never touches the CSV data itself.
+const TRACKER_KEY = "op-tracker-state-v1";
+const N_ENEMY_SLOTS = 3;
+const N_CREWMATE_SLOTS = 5;
+
+function loadTrackerState() {
+  const empty = () => ({
+    enemies: Array(N_ENEMY_SLOTS).fill(null),
+    crewmates: Array(N_CREWMATE_SLOTS).fill(null),
+    hand: [],
+  });
+  try {
+    const raw = localStorage.getItem(TRACKER_KEY);
+    if (!raw) return empty();
+    const parsed = JSON.parse(raw);
+    const base = empty();
+    return {
+      enemies: Array.isArray(parsed.enemies) ? base.enemies.map((_, i) => parsed.enemies[i] ?? null) : base.enemies,
+      crewmates: Array.isArray(parsed.crewmates)
+        ? base.crewmates.map((_, i) => parsed.crewmates[i] ?? null)
+        : base.crewmates,
+      hand: Array.isArray(parsed.hand) ? parsed.hand : [],
+    };
+  } catch {
+    return empty();
+  }
+}
+
+function saveTrackerState() {
+  try {
+    localStorage.setItem(TRACKER_KEY, JSON.stringify(state.tracker));
+  } catch {
+    // localStorage unavailable (private mode, etc.) — tracker just won't persist.
+  }
+}
+
+function findEnemyByRef(ref) {
+  return state.data.enemies.find((r) => r.jpg_reference === ref) || null;
+}
+
+function findCrewmateByRef(ref) {
+  return state.data.crewmates.find((r) => r.jpg_reference === ref) || null;
+}
+
+function renderTracker() {
+  els.results.classList.remove("grid");
+  const enemySlots = state.tracker.enemies
+    .map((ref, i) => trackerSlotHTML(ref ? findEnemyByRef(ref) : null, "enemies", i, "Enemy space"))
+    .join("");
+  const crewmateSlots = state.tracker.crewmates
+    .map((ref, i) => trackerSlotHTML(ref ? findCrewmateByRef(ref) : null, "crewmates", i, "Crewmate space"))
+    .join("");
+  const handCards = state.tracker.hand
+    .map((ref, i) => trackerHandCardHTML(findCrewmateByRef(ref), i))
+    .join("");
+
+  els.results.innerHTML = `
+    <div class="tracker">
+      <section class="tracker-section">
+        <div class="tracker-heading">
+          <h3>🔥 Enemies in play</h3>
+          <span class="tracker-sub">The 3 enemy board spaces</span>
+        </div>
+        <div class="tracker-row tracker-row-3">${enemySlots}</div>
+      </section>
+
+      <section class="tracker-section">
+        <div class="tracker-heading">
+          <h3>⚓ Recruited crewmates</h3>
+          <span class="tracker-sub">The 5 crewmate board spaces</span>
+        </div>
+        <div class="tracker-row tracker-row-5">${crewmateSlots}</div>
+      </section>
+
+      <section class="tracker-section">
+        <div class="tracker-heading">
+          <h3>🃏 Your hand</h3>
+          <span class="tracker-sub">${state.tracker.hand.length} card${state.tracker.hand.length === 1 ? "" : "s"}</span>
+        </div>
+        <div class="tracker-row tracker-hand">
+          ${handCards}
+          <button class="tracker-slot tracker-slot-empty tracker-add-hand" data-add-hand="1">
+            <span class="tracker-plus">+</span>
+            <span class="tracker-slot-label">Add to hand</span>
+          </button>
+        </div>
+      </section>
+
+      <button class="tracker-reset" id="trackerReset">Reset tracker</button>
+    </div>
+  `;
+
+  els.resultCount.textContent = "";
+  wireTrackerEvents();
+}
+
+function trackerSlotHTML(row, kind, index, emptyLabel) {
+  if (!row) {
+    return `
+      <button class="tracker-slot tracker-slot-empty" data-slot-kind="${kind}" data-slot-index="${index}">
+        <span class="tracker-plus">+</span>
+        <span class="tracker-slot-label">${escapeHTML(emptyLabel)}</span>
+      </button>
+    `;
+  }
+  const isEnemy = kind === "enemies";
+  const img = isEnemy ? `Cards/Enemies/${row.jpg_reference}` : `Cards/Crewmates/${row.jpg_reference}`;
+  const detail = isEnemy ? enemyDetailHTML(row) : crewmateDetailHTML(row);
+  const sub = isEnemy
+    ? row.threat_english
+      ? `🔥 ${escapeHTML(row.threat_english)}`
+      : ""
+    : row.power
+    ? `P${escapeHTML(row.power)}`
+    : "";
+  return `
+    <div class="tracker-slot tracker-slot-filled" data-detail="${escapeHTML(detail)}">
+      <button class="tracker-clear" data-clear-kind="${kind}" data-clear-index="${index}" title="Remove" aria-label="Remove">✕</button>
+      <img class="tracker-thumb" src="${img}" loading="lazy" alt="${escapeHTML(row.name_english)}">
+      <div class="tracker-slot-name">${escapeHTML(row.name_english)}</div>
+      ${sub ? `<div class="tracker-slot-sub">${sub}</div>` : ""}
+    </div>
+  `;
+}
+
+function trackerHandCardHTML(row, index) {
+  if (!row) return "";
+  const img = `Cards/Crewmates/${row.jpg_reference}`;
+  const detail = crewmateDetailHTML(row);
+  const sub = row.power ? `P${escapeHTML(row.power)}` : "";
+  return `
+    <div class="tracker-slot tracker-slot-filled" data-detail="${escapeHTML(detail)}">
+      <button class="tracker-clear" data-clear-hand="${index}" title="Remove" aria-label="Remove">✕</button>
+      <img class="tracker-thumb" src="${img}" loading="lazy" alt="${escapeHTML(row.name_english)}">
+      <div class="tracker-slot-name">${escapeHTML(row.name_english)}</div>
+      ${sub ? `<div class="tracker-slot-sub">${sub}</div>` : ""}
+    </div>
+  `;
+}
+
+function wireTrackerEvents() {
+  document.querySelectorAll(".tracker-slot-empty[data-slot-kind]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const kind = btn.dataset.slotKind;
+      const index = Number(btn.dataset.slotIndex);
+      openPicker(kind, (ref) => {
+        state.tracker[kind][index] = ref;
+        saveTrackerState();
+        renderTracker();
+      });
+    });
+  });
+
+  const addHandBtn = document.querySelector("[data-add-hand]");
+  if (addHandBtn) {
+    addHandBtn.addEventListener("click", () => {
+      openPicker("crewmates", (ref) => {
+        state.tracker.hand.push(ref);
+        saveTrackerState();
+        renderTracker();
+      });
+    });
+  }
+
+  document.querySelectorAll("[data-clear-kind]").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const kind = btn.dataset.clearKind;
+      const index = Number(btn.dataset.clearIndex);
+      state.tracker[kind][index] = null;
+      saveTrackerState();
+      renderTracker();
+    });
+  });
+
+  document.querySelectorAll("[data-clear-hand]").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const index = Number(btn.dataset.clearHand);
+      state.tracker.hand.splice(index, 1);
+      saveTrackerState();
+      renderTracker();
+    });
+  });
+
+  const resetBtn = $("#trackerReset");
+  if (resetBtn) {
+    resetBtn.addEventListener("click", () => {
+      if (!confirm("Clear all tracked enemies, crewmates, and hand cards?")) return;
+      state.tracker = { enemies: Array(N_ENEMY_SLOTS).fill(null), crewmates: Array(N_CREWMATE_SLOTS).fill(null), hand: [] };
+      saveTrackerState();
+      renderTracker();
+    });
+  }
+
+  wireCardClicks(); // filled tracker slots reuse the same data-detail modal mechanism
+}
+
+// ---- Card picker (used by the tracker to assign a slot) ---------------------
+function openPicker(kind, onPick) {
+  const source = kind === "enemies" ? state.data.enemies : state.data.crewmates;
+  const folder = kind === "enemies" ? "Cards/Enemies" : "Cards/Crewmates";
+
+  const renderList = (q) => {
+    const query = (q || "").toLowerCase();
+    const rows = source.filter((r) =>
+      matches(
+        kind === "enemies"
+          ? [r.name_korean, r.name_english]
+          : [r.name_korean, r.name_english, r.episode_english],
+        query
+      )
+    );
+    els.pickerList.innerHTML =
+      rows
+        .map(
+          (r) => `
+        <div class="picker-item" data-ref="${escapeHTML(r.jpg_reference)}">
+          <img src="${folder}/${r.jpg_reference}" loading="lazy" alt="">
+          <div class="picker-item-name">
+            ${escapeHTML(r.name_english)}
+            <span class="picker-item-ko">${escapeHTML(r.name_korean)}</span>
+          </div>
+        </div>
+      `
+        )
+        .join("") || `<p class="empty">No cards match.</p>`;
+
+    els.pickerList.querySelectorAll(".picker-item").forEach((el) => {
+      el.addEventListener("click", () => {
+        onPick(el.dataset.ref);
+        closePicker();
+      });
+    });
+  };
+
+  els.pickerSearch.value = "";
+  els.pickerTitle.textContent = kind === "enemies" ? "Choose an enemy or boss" : "Choose a crewmate";
+  renderList("");
+  els.pickerSearch.oninput = () => renderList(els.pickerSearch.value);
+  els.picker.classList.add("open");
+  els.pickerSearch.focus();
+}
+
+function closePicker() {
+  els.picker.classList.remove("open");
 }
 
 document.addEventListener("DOMContentLoaded", boot);

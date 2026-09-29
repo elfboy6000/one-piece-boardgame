@@ -386,6 +386,218 @@ main {
   margin-right: 0.25em;
 }
 
+/* Game Tracker */
+.tracker {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.tracker-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.tracker-heading h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.tracker-sub {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+}
+
+.tracker-row {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.tracker-row-3 {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.tracker-row-5 {
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+}
+
+.tracker-hand {
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+}
+
+.tracker-slot {
+  position: relative;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--panel);
+  overflow: hidden;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tracker-slot-empty {
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  color: var(--text-dim);
+  cursor: pointer;
+  font: inherit;
+  border-style: dashed;
+  border-width: 2px;
+}
+
+.tracker-slot-empty:hover {
+  border-color: var(--accent-2);
+  color: var(--text);
+}
+
+.tracker-plus {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.tracker-slot-label {
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 0 0.4rem;
+}
+
+.tracker-slot-filled {
+  cursor: pointer;
+}
+
+.tracker-thumb {
+  width: 100%;
+  aspect-ratio: 5 / 7;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  background: #0a1119;
+}
+
+.tracker-slot-name {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.35rem 0.5rem 0.1rem;
+}
+
+.tracker-slot-sub {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  padding: 0 0.5rem 0.4rem;
+}
+
+.tracker-clear {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.tracker-add-hand {
+  min-height: 150px;
+}
+
+.tracker-reset {
+  align-self: flex-start;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  color: var(--danger);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.tracker-reset:hover {
+  border-color: var(--danger);
+}
+
+/* Card picker modal */
+.picker-content {
+  flex-direction: column;
+  max-width: 520px;
+}
+
+.picker-body {
+  padding: 1.2rem;
+  width: 100%;
+}
+
+.picker-body h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1rem;
+}
+
+#pickerSearch {
+  width: 100%;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.55rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.picker-list {
+  max-height: 55vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.picker-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.4rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.picker-item:hover {
+  background: var(--panel-2);
+  border-color: var(--border);
+}
+
+.picker-item img {
+  width: 42px;
+  height: 58px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 4px;
+  background: #0a1119;
+  flex-shrink: 0;
+}
+
+.picker-item-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.picker-item-ko {
+  display: block;
+  font-weight: 400;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
 footer {
   max-width: 1100px;
   margin: 2rem auto 0;

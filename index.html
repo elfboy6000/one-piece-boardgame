@@ -16,9 +16,12 @@
       <button class="tab active" data-tab="characters">Characters</button>
       <button class="tab" data-tab="enemies">Enemies &amp; Bosses</button>
       <button class="tab" data-tab="crewmates">Crewmates</button>
+      <button class="tab" data-tab="tracker">Game Tracker</button>
     </div>
     <div class="controls">
-      <input id="search" type="search" placeholder="Search name or ability (한글 or English)…" autocomplete="off" />
+      <div id="searchWrap" style="display: contents">
+        <input id="search" type="search" placeholder="Search name or ability (한글 or English)…" autocomplete="off" />
+      </div>
       <div id="episodeFilterWrap" hidden>
         <select id="episodeFilter">
           <option value="all">All episodes</option>
@@ -31,7 +34,7 @@
           <option value="boss">Bosses only</option>
         </select>
       </div>
-      <div class="lang-toggle">
+      <div id="langWrap" class="lang-toggle">
         <button class="lang-btn active" data-lang="both">한/EN</button>
         <button class="lang-btn" data-lang="ko">한글</button>
         <button class="lang-btn" data-lang="en">EN</button>
@@ -44,7 +47,7 @@
     <div class="result-count" id="resultCount"></div>
     <div class="grid" id="results"></div>
 
-    <div class="legend">
+    <div class="legend" id="legend">
       <span><img src="Icons/icon_swap.png" alt="Swap">Swap</span>
       <span><img src="Icons/icon_move.jpeg" alt="Move">Move</span>
       <span><img src="Icons/icon_powerup.png" alt="Power Up!">Power Up!</span>
@@ -63,6 +66,17 @@
     <div class="modal-content">
       <button class="modal-close" id="modalClose">✕</button>
       <div id="modalBody" style="display: contents"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="picker">
+    <div class="modal-content picker-content">
+      <button class="modal-close" id="pickerClose">✕</button>
+      <div class="picker-body">
+        <h3 id="pickerTitle">Choose a card</h3>
+        <input id="pickerSearch" type="search" placeholder="Search name (한글 or English)…" autocomplete="off" />
+        <div class="picker-list" id="pickerList"></div>
+      </div>
     </div>
   </div>
 

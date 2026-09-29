@@ -12,6 +12,8 @@ A small website for looking things up mid-game: search or filter by episode/enem
 
 It reads the 3 CSVs client-side on page load, so any edit you push to a CSV to fix a card name/translation shows up automatically — no rebuild step, just refresh.
 
+A fourth tab, **Game Tracker**, lets you track a session in progress: 3 slots for the enemies/bosses currently in play, 5 slots for recruited crewmates, and an open-ended hand of crewmate cards. Click an empty slot to search and pick a card (thumbnail + name, searchable in either language); click a filled slot to reopen its full detail (art + ability text); click the ✕ to clear it. The tracker state is saved in your browser's local storage, so it survives a refresh — but it's per-browser/per-device only (not shared between players or devices), and "Reset tracker" wipes it for a new game.
+
 ### Enabling GitHub Pages (one-time)
 
 1. Push this repo to GitHub (`git push`).
