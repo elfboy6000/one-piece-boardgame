@@ -1,0 +1,38 @@
+type,threat_korean,threat_english,name_korean,name_english,on_reveal_korean,on_reveal_english,defeat_condition_korean,defeat_condition_english,bounty,jpg_reference
+enemy,1,1,킹,King,,,모든 동료의 파워가 오름차순 또는 내림차순으로 연속된 숫자일 것(예: 1-2-3-4-5 또는 5-4-3-2-1).,"All crewmates' Power form a run of consecutive numbers, ascending or descending (e.g. 1-2-3-4-5 or 5-4-3-2-1).",4000000,King.jpg
+enemy,1,1,후지토라,Fujitora,,,동료 4명의 색깔이 서로 같을 것.,4 crewmates share the same colour.,3000000,Fujitora.jpg
+enemy,1,1,저지,Jesus Burgess,,,모든 동료의 파워 합계가 27 이상이면서 적어도 1명은 홀케이크일 것.,All crewmates' total Power is 27 or more and at least 1 is Whole Cake (Island).,2000000,Jesus_Burgess.jpg
+enemy,1,1,크로,Kuro,,,색깔이 같은 동료 2명이 서로 인접해 있을 것.,2 crewmates of the same colour are adjacent to each other.,1000000,Kuro.jpg
+enemy,2,2,오로치,Orochi,,,와노쿠니 동료 3명이 서로 인접해 있을 것.,3 Wano Country crewmates are adjacent to each other.,3000000,Orochi.jpg
+enemy,2,2,벳지,Bege,,,동료 3명의 파워가 서로 같을 것.,3 crewmates have equal Power to each other.,2000000,Bege.jpg
+enemy,2,2,페로스페로,Perospero,,,모든 동료의 파워 합계가 25 이하일 것.,All crewmates' total Power is 25 or less.,2000000,Perospero.jpg
+enemy,2,2,스모커,Smoker,,,모든 동료의 파워가 각각 짝수일 것.,Every crewmate's Power is an even number.,2000000,Smoker.jpg
+enemy,2,2,와포루,Wapol,,,모든 동료의 파워 합계가 17~24일 것.,All crewmates' total Power is between 17 and 24.,2000000,Wapol.jpg
+enemy,2,2,잭,Jack,,,모든 동료의 파워가 서로 다르면서 오름차순일 것(예: 2-3-6-7-9).,All crewmates have different Power and are in ascending order (e.g. 2-3-6-7-9).,2000000,Jack.jpg
+enemy,2,2,페로나,Perona,,,모든 동료의 파워 합계가 17 이하일 것.,All crewmates' total Power is 17 or less.,1000000,Perona.jpg
+enemy,2,2,시저,Caesar,,,모든 동료의 파워 합계가 정확히 25일 것.,All crewmates' total Power is exactly 25.,"No bounty printed (replaced on this card by a bonus effect: ""Take 1 fallen crewmate and add it to your hand."" / 쓰러진 동료 1명을 데려와 손에 듭니다.)",Caesar.jpg
+enemy,2,2,알비다,Alvida,,,모든 동료의 파워가 각각 4 이하일 것.,Every crewmate's Power is 4 or less.,1000000,Alvida.jpg
+enemy,2,2,센토마루,Sentomaru,,,모든 동료의 파워가 각각 5 이상일 것.,Every crewmate's Power is 5 or more.,2000000,Sentomaru.jpg
+enemy,2,2,클리크,Don Krieg,,,모든 동료의 파워가 서로 다르면서 내림차순일 것(예: 7-6-4-2-1).,All crewmates have different Power and are in descending order (e.g. 7-6-4-2-1).,2000000,Don_Krieg.jpg
+enemy,2,2,베라미,Bellamy,,,모든 동료의 파워가 각각 홀수일 것.,Every crewmate's Power is an odd number.,1000000,Bellamy.jpg
+enemy,2,2,호디,Hody Jones,,,모든 동료의 파워 합계가 25 이상일 것.,All crewmates' total Power is 25 or more.,1000000,Hody_Jones.jpg
+enemy,2,2,폭시,Foxy,,,모든 동료의 색깔이 서로 다를 것.,All crewmates have different colours from each other.,1000000,Foxy.jpg
+enemy,2,2,히나,Hina,,,모든 동료의 파워 합계가 26 이상이면서 짝수일 것.,All crewmates' total Power is 26 or more and even.,1000000,Hina.jpg
+enemy,3,3,아오키지,Aokiji,,,모든 동료의 파워가 서로 다를 것.,All crewmates have different Power from each other.,4000000,Aokiji.jpg
+enemy,3,3,슈거,Sugar,,,파워나 색깔이 같은 동료가 서로 인접해 있지 않을 것.,No two adjacent crewmates share the same Power or the same colour.,3000000,Sugar.jpg
+enemy,3,3,마젤란,Magellan,,,"동료 3명의 파워가 서로 같고, 동료 3명의 색깔이 서로 같을 것.","3 crewmates have equal Power to each other, and 3 crewmates share the same colour.",3000000,Magellan.jpg
+enemy,3,3,키자루,Kizaru,,,"모든 동료의 파워 합계가 정확히 25면서, 파워가 같은 동료 2명이 서로 인접해 있을 것.","All crewmates' total Power is exactly 25, and 2 crewmates of equal Power are adjacent to each other.",3000000,Kizaru.jpg
+enemy,3,3,모건,Morgan,,,파워가 같은 동료 2명이 서로 인접해 있을 것.,2 crewmates of equal Power are adjacent to each other.,1000000,Morgan.jpg
+enemy,3,3,카타쿠리,Katakuri,,,"파워가 같은 동료 2명이 서로 인접해 있고, 색깔이 같은 동료 2명이 서로 인접해 있을 것.","2 crewmates of equal Power are adjacent to each other, and 2 crewmates of the same colour are adjacent to each other.",2000000,Katakuri.jpg
+enemy,X (die),X (die roll),버기,Buggy,,,동료 X명의 파워가 서로 같을 것. X는 주사위입니다. (대결할 때 주사위 굴림.),X crewmates have equal Power to each other. X is the [Die] result (roll the die during the Duel).,2000000,Buggy.jpg
+boss,4,4,아카이누,Akainu,주사위 칸에 있는 동료 1명을 쓰러뜨립니다.,Defeat 1 crewmate in the space matching the [Die] result.,모든 동료의 파워 합계가 정확히 30일 것.,All crewmates' total Power is exactly 30.,5000000,Akainu.jpg
+boss,4,4,도플라밍고,Doflamingo,"모든 플레이어의 손에 있는 동료를 전부 모아 섞은 다음, 각자 원래 손에 들고 있던 만큼 무작위로 다시 나눠 갖습니다.","Gather all crewmates from every player's hand, shuffle them, then randomly redeal to each player the same number of cards they originally held.",모든 동료의 파워 합계가 33 이상이면서 적어도 1명은 드레스로자일 것.,All crewmates' total Power is 33 or more and at least 1 is Dressrosa.,5000000,Doflamingo.jpg
+boss,4,4,아론,Arlong,+3 불꽃(Flame).,Raise the [Flame] by 3.,모든 동료의 파워 합계가 정확히 17일 것.,All crewmates' total Power is exactly 17.,3000000,Arlong.jpg
+boss,4,4,크로커다일,Crocodile,모든 알라바스타 동료를 쓰러뜨립니다.,Defeat all Alabasta crewmates.,모든 동료의 파워 합계가 31 이상이면서 적어도 1명은 알라바스타일 것.,All crewmates' total Power is 31 or more and at least 1 is Alabasta.,4000000,Crocodile.jpg
+boss,4,4,로브 루치,Rob Lucci,다른 모든 적과 보스를 저지하고 즉시 교체합니다.,Prevent all other Enemy and Boss cards and immediately replace them.,파워가 9인 동료 2명이 서로 인접해 있을 것.,2 crewmates with Power 9 are adjacent to each other.,4000000,Rob_Lucci.jpg
+boss,5,5,검은 수염,Blackbeard,모든 플레이어는 손에서 동료를 무작위로 1명씩 버립니다.,Every player randomly discards 1 crewmate from their hand.,동료 4명의 파워가 서로 같을 것.,4 crewmates have equal Power to each other.,5000000,Blackbeard.jpg
+boss,5,5,카이도,Kaido,주사위 칸에 있는 모든 과거 동료와 현재 동료를 쓰러뜨립니다.,"Defeat every current and past crewmate in the space matching the [Die] result.",모든 동료의 파워 합계가 39 이상일 것.,All crewmates' total Power is 39 or more.,5000000,Kaido.jpg
+boss,5,5,에넬,Enel,동료 더미 맨 위 동료 주사위+주사위 명을 버립니다.,"Discard from the top of the crewmate deck a number of crewmates equal to [Die]+[Die] (roll twice and add).",모든 동료의 색깔이 서로 같을 것.,All crewmates share the same colour.,4000000,Enel.jpg
+boss,X (die-based),X (die-based),겟코 모리아,Gecko Moria,동료 더미 맨 위 동료 1명을 쓰러뜨립니다.,Defeat the top crewmate of the crewmate deck.,모든 동료의 파워 합계가 쓰러진 동료의 파워 합계와 같을 것. X는 쓰러진 동료의 수입니다.,"All crewmates' total Power equals the total Power of all fallen crewmates. X is the number of fallen crewmates (determines the bounty).",X000000,Gecko_Moria.jpg
+boss,X (die-based),X (die-based),빅 맘,Big Mom,동료 더미 맨 위 동료 1명을 빅 맘 아래에 놓습니다. X는 그 동료의 파워입니다.,"Place the top crewmate of the crewmate deck underneath Big Mom. X is that crewmate's Power (determines the bounty).",모든 동료의 파워와 색깔이 서로 다를 것.,All crewmates have different Power and different colours from each other.,X000000,Big_Mom.jpg
+back,,,,Card Back,,,,,,Card_Back.jpg
