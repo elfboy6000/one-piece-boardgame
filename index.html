@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One Piece: 동료들과 바다로 — Card Wiki</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header>
+    <div class="title-row">
+      <h1>🏴‍☠️ 동료들과 바다로 — Card Wiki</h1>
+      <span class="subtitle">One Piece board game translation reference</span>
+    </div>
+    <div class="tabs">
+      <button class="tab active" data-tab="characters">Characters</button>
+      <button class="tab" data-tab="enemies">Enemies &amp; Bosses</button>
+      <button class="tab" data-tab="crewmates">Crewmates</button>
+    </div>
+    <div class="controls">
+      <input id="search" type="search" placeholder="Search name or ability (한글 or English)…" autocomplete="off" />
+      <div id="episodeFilterWrap" hidden>
+        <select id="episodeFilter">
+          <option value="all">All episodes</option>
+        </select>
+      </div>
+      <div id="kindFilterWrap" hidden>
+        <select id="kindFilter">
+          <option value="all">Enemies + Bosses</option>
+          <option value="enemy">Enemies only</option>
+          <option value="boss">Bosses only</option>
+        </select>
+      </div>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="both">한/EN</button>
+        <button class="lang-btn" data-lang="ko">한글</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div id="loadError" class="error-box" hidden></div>
+    <div class="result-count" id="resultCount"></div>
+    <div class="grid" id="results"></div>
+
+    <div class="legend">
+      <span><img src="Icons/icon_swap.png" alt="Swap">Swap</span>
+      <span><img src="Icons/icon_move.jpeg" alt="Move">Move</span>
+      <span><img src="Icons/icon_powerup.png" alt="Power Up!">Power Up!</span>
+      <span><img src="Icons/icon_recruit.jpeg" alt="Recruit">Recruit</span>
+      <span><img src="Icons/icon_prevent.jpeg" alt="Prevent">Prevent</span>
+      <span>🔥 Flame</span>
+      <span>🎲 Die</span>
+    </div>
+  </main>
+
+  <footer>
+    Fan translation reference for personal use while playing. Data lives in <code>Cards/*/*.csv</code> — edit those to fix a card and refresh the page.
+  </footer>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div id="modalBody" style="display: contents"></div>
+    </div>
+  </div>
+
+  <script src="assets/csv.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

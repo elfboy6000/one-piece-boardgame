@@ -4,14 +4,34 @@
 
 Digitized card data for the One Piece cooperative board game "동료들과 바다로," published by Studio Supernova / Korea Board Games under license from Toei Animation. This repo holds scanned card images, board/box photos, and CSV extractions (Korean text + English translation) for each card type.
 
+## Card Wiki (`index.html`)
+
+A small website for looking things up mid-game: search or filter by episode/enemy-boss, toggle Korean/English/both, click a card for the full-size art and complete ability text with the keyword icons rendered inline.
+
+**Live at:** https://elfboy6000.github.io/one-piece-boardgame/ (via GitHub Pages, once enabled — see below).
+
+It reads the 3 CSVs client-side on page load, so any edit you push to a CSV to fix a card name/translation shows up automatically — no rebuild step, just refresh.
+
+### Enabling GitHub Pages (one-time)
+
+1. Push this repo to GitHub (`git push`).
+2. On GitHub: **Settings → Pages**.
+3. Under "Build and deployment", set **Source** to "Deploy from a branch".
+4. Set **Branch** to `main` and folder to `/ (root)`, then **Save**.
+5. GitHub gives you a URL like `https://<username>.github.io/<repo>/` — that's your live wiki, updated a minute or two after every push to `main`.
+
+Note: opening `index.html` by double-clicking it (a `file://` URL) will **not** work — browsers block a local page from loading local CSV/image files that way. Either use the GitHub Pages URL above, or if you want to preview a change before pushing, run any static file server locally (e.g. `python3 -m http.server` from the project folder) and open the printed `localhost` URL.
+
 ## Repo layout
 
 ```
+index.html        The card wiki (see above)
+assets/           Its CSS/JS (csv.js parses the CSVs, app.js renders everything)
 Board/
   box_cover.jpg   Retail box art
   game_board.jpg  The turn-order lane on the game board
 Icons/
-  icon_swap.png, icon_move.png, icon_powerup.png, icon_recruit.png, icon_prevent.png
+  icon_swap.png, icon_move.jpeg, icon_powerup.png, icon_recruit.jpeg, icon_prevent.jpeg
 Cards/
   Characters/   10 character cards (+ card back) — characters.csv
   Enemies/      26 enemy + 10 boss cards (+ card back) — enemies.csv
@@ -89,12 +109,12 @@ The 3 CSVs never embed images directly — instead, every mention of one of the 
 | Token (Korean) | Token (English) | Icon file |
 |---|---|---|
 | `[교환]` | `[Swap]` | `Icons/icon_swap.png` |
-| `[이동]` | `[Move]` | `Icons/icon_move.png` |
+| `[이동]` | `[Move]` | `Icons/icon_move.jpeg` |
 | `[파워업]` | `[Power Up!]` | `Icons/icon_powerup.png` |
-| `[영입]` | `[Recruit]` | `Icons/icon_recruit.png` |
-| `[저지]` | `[Prevent]` | `Icons/icon_prevent.png` |
+| `[영입]` | `[Recruit]` | `Icons/icon_recruit.jpeg` |
+| `[저지]` | `[Prevent]` | `Icons/icon_prevent.jpeg` |
 
-Example (HTML): replacing `[Move]` with `<img src="Icons/icon_move.png" alt="Move" height="20">` turns
+Example (HTML): replacing `[Move]` with `<img src="Icons/icon_move.jpeg" alt="Move" height="20">` turns
 
 > `[Move] up to [Die] times.`
 
