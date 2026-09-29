@@ -49,10 +49,10 @@ These 5 keywords are printed on cards as a small icon + label (see `Icons/`). In
 | Icon | Keyword | Effect |
 |---|---|---|
 | ![Swap](Icons/icon_swap.png) | 교환 Swap | Trade a chosen crewmate card with another player's chosen crewmate. |
-| ![Move](Icons/icon_move.png) | 이동 Move | Choose a crewmate card, move it to any crewmate space. |
+| ![Move](Icons/icon_move.jpeg) | 이동 Move | Choose a crewmate card, move it to any crewmate space. |
 | ![Power Up!](Icons/icon_powerup.png) | 파워업! Power Up! | Place a Power Up token on a crewmate (+1 Power each, stackable). |
-| ![Recruit](Icons/icon_recruit.png) | 영입 Recruit | Immediately trigger a hand crewmate's ability. |
-| ![Prevent](Icons/icon_prevent.png) | 저지 Prevent | Cancel an enemy (or boss) card's ability/condition from activating. |
+| ![Recruit](Icons/icon_recruit.jpeg) | 영입 Recruit | Immediately trigger a hand crewmate's ability. |
+| ![Prevent](Icons/icon_prevent.jpeg) | 저지 Prevent | Cancel an enemy (or boss) card's ability/condition from activating. |
 
 Two more inline symbols appear throughout the ability text but aren't part of this 5-icon set: 🔥 (the Flame/threat meter, written `[불꽃]`/`[Flame]`) and 🎲 (the die roll, written `[주사위]`/`[Die]` or the 🎲 emoji directly).
 
