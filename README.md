@@ -33,7 +33,7 @@ Board/
   box_cover.jpg   Retail box art
   game_board.jpg  The turn-order lane on the game board
 Icons/
-  icon_swap.png, icon_move.jpeg, icon_powerup.png, icon_recruit.jpeg, icon_prevent.jpeg
+  swap_gyohwan.svg, move_idong.svg, powerup.svg, recruit_yeongip.svg, prevent_jeoji.svg
 Cards/
   Characters/   10 character cards (+ card back) — characters.csv
   Enemies/      26 enemy + 10 boss cards (+ card back) — enemies.csv
@@ -70,11 +70,11 @@ These 5 keywords are printed on cards as a small icon + label (see `Icons/`). In
 
 | Icon | Keyword | Effect |
 |---|---|---|
-| ![Swap](Icons/icon_swap.png) | 교환 Swap | Trade a chosen crewmate card with another player's chosen crewmate. |
-| ![Move](Icons/icon_move.jpeg) | 이동 Move | Choose a crewmate card, move it to any crewmate space. |
-| ![Power Up!](Icons/icon_powerup.png) | 파워업! Power Up! | Place a Power Up token on a crewmate (+1 Power each, stackable). |
-| ![Recruit](Icons/icon_recruit.jpeg) | 영입 Recruit | Immediately trigger a hand crewmate's ability. |
-| ![Prevent](Icons/icon_prevent.jpeg) | 저지 Prevent | Cancel an enemy (or boss) card's ability/condition from activating. |
+| ![Swap](Icons/swap_gyohwan.svg) | 교환 Swap | Trade a chosen crewmate card with another player's chosen crewmate. |
+| ![Move](Icons/move_idong.svg) | 이동 Move | Choose a crewmate card, move it to any crewmate space. |
+| ![Power Up!](Icons/powerup.svg) | 파워업! Power Up! | Place a Power Up token on a crewmate (+1 Power each, stackable). |
+| ![Recruit](Icons/recruit_yeongip.svg) | 영입 Recruit | Immediately trigger a hand crewmate's ability. |
+| ![Prevent](Icons/prevent_jeoji.svg) | 저지 Prevent | Cancel an enemy (or boss) card's ability/condition from activating. |
 
 Two more inline symbols appear throughout the ability text but aren't part of this 5-icon set: 🔥 (the Flame/threat meter, written `[불꽃]`/`[Flame]`) and 🎲 (the die roll, written `[주사위]`/`[Die]` or the 🎲 emoji directly).
 
@@ -110,13 +110,13 @@ The 3 CSVs never embed images directly — instead, every mention of one of the 
 
 | Token (Korean) | Token (English) | Icon file |
 |---|---|---|
-| `[교환]` | `[Swap]` | `Icons/icon_swap.png` |
-| `[이동]` | `[Move]` | `Icons/icon_move.jpeg` |
-| `[파워업]` | `[Power Up!]` | `Icons/icon_powerup.png` |
-| `[영입]` | `[Recruit]` | `Icons/icon_recruit.jpeg` |
-| `[저지]` | `[Prevent]` | `Icons/icon_prevent.jpeg` |
+| `[교환]` | `[Swap]` | `Icons/swap_gyohwan.svg` |
+| `[이동]` | `[Move]` | `Icons/move_idong.svg` |
+| `[파워업]` | `[Power Up!]` | `Icons/powerup.svg` |
+| `[영입]` | `[Recruit]` | `Icons/recruit_yeongip.svg` |
+| `[저지]` | `[Prevent]` | `Icons/prevent_jeoji.svg` |
 
-Example (HTML): replacing `[Move]` with `<img src="Icons/icon_move.jpeg" alt="Move" height="20">` turns
+Example (HTML): replacing `[Move]` with `<img src="Icons/move_idong.svg" alt="Move" height="20">` turns
 
 > `[Move] up to [Die] times.`
 

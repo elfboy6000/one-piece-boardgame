@@ -1,15 +1,15 @@
 // ---- Icon token replacement ----------------------------------------------
 const ICON_MAP = [
-  [/\[교환\]/g, "icon_swap.png", "Swap"],
-  [/\[Swap\]/g, "icon_swap.png", "Swap"],
-  [/\[이동\]/g, "icon_move.jpeg", "Move"],
-  [/\[Move\]/g, "icon_move.jpeg", "Move"],
-  [/\[파워업\]/g, "icon_powerup.png", "Power Up!"],
-  [/\[Power Up!\]/g, "icon_powerup.png", "Power Up!"],
-  [/\[영입\]/g, "icon_recruit.jpeg", "Recruit"],
-  [/\[Recruit\]/g, "icon_recruit.jpeg", "Recruit"],
-  [/\[저지\]/g, "icon_prevent.jpeg", "Prevent"],
-  [/\[Prevent\]/g, "icon_prevent.jpeg", "Prevent"],
+  [/\[교환\]/g, "swap_gyohwan.svg", "Swap"],
+  [/\[Swap\]/g, "swap_gyohwan.svg", "Swap"],
+  [/\[이동\]/g, "move_idong.svg", "Move"],
+  [/\[Move\]/g, "move_idong.svg", "Move"],
+  [/\[파워업\]/g, "powerup.svg", "Power Up!"],
+  [/\[Power Up!\]/g, "powerup.svg", "Power Up!"],
+  [/\[영입\]/g, "recruit_yeongip.svg", "Recruit"],
+  [/\[Recruit\]/g, "recruit_yeongip.svg", "Recruit"],
+  [/\[저지\]/g, "prevent_jeoji.svg", "Prevent"],
+  [/\[Prevent\]/g, "prevent_jeoji.svg", "Prevent"],
 ];
 
 function escapeHTML(str) {
