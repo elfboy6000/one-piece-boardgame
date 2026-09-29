@@ -1,15 +1,24 @@
 # 원피스 보드게임 — 동료들과 바다로 (One Piece: To the Sea with Your Crewmates)
 
-Digitized card data for the One Piece cooperative board game "동료들과 바다로." This repo holds scanned card images and CSV extractions (Korean text + English translation) for each card type.
+![Box cover](Board/box_cover.jpg)
+
+Digitized card data for the One Piece cooperative board game "동료들과 바다로," published by Studio Supernova / Korea Board Games under license from Toei Animation. This repo holds scanned card images, board/box photos, and CSV extractions (Korean text + English translation) for each card type.
 
 ## Repo layout
 
 ```
+Board/
+  box_cover.jpg   Retail box art
+  game_board.jpg  The turn-order lane on the game board
+Icons/
+  icon_swap.png, icon_move.png, icon_powerup.png, icon_recruit.png, icon_prevent.png
 Cards/
   Characters/   10 character cards (+ card back) — characters.csv
   Enemies/      26 enemy + 10 boss cards (+ card back) — enemies.csv
   Crewmates/    54 crewmate cards (+ card back) — crewmates.csv
 ```
+
+![Game board — turn order lane](Board/game_board.jpg)
 
 Each `.jpg` is named after the English name of the character/card it depicts, and each folder's CSV cross-references the image via a `jpg_reference` column, alongside the Korean name/text, an English translation, and relevant stats (Power, Threat, Bounty, etc.).
 
@@ -29,20 +38,23 @@ A cooperative pirate-adventure game for multiple players. Everyone shares one go
 
 ## Turn structure (clockwise)
 
-1. **영입 Recruit** — draw the top crewmate card and place it face up in front of you (unless it has a Recruit-only ability, which resolves immediately instead).
-2. **대결 Duel** — check the current enemy's defeat condition against your crewmates; if satisfied, defeat it (score its bounty, move it to the defeated pile).
-3. **휴식 Rest** — if your enemy space is empty, refill/flip enemies; play passes to the next player's space.
+1. **영입 Recruit** — recruit 1 crewmate. Draw the top crewmate card and place it face up in front of you; you may activate that crewmate's ability immediately if you want.
+2. **대결 Duel** — face the current enemies with your current crewmates, left to right. If you meet an enemy's defeat condition, defeat it: move it to the defeated-enemy area and **lower the Flame by its Threat value**. If you fail to defeat it, it stays and you instead **raise the Flame by its Threat value**.
+3. **휴식 Rest** — a new enemy appears in any empty enemy space, and you refill your hand back up to 4 crewmates.
 
 ## Ability keyword vocabulary
 
-| Keyword | Effect |
-|---|---|
-| 교환 Swap | Trade a chosen crewmate card with another player's chosen crewmate. |
-| 이동 Move | Choose a crewmate card, move it to any crewmate space. |
-| 파워업! Power Up! | Place a Power Up token on a crewmate (+1 Power each, stackable). |
-| 영입 Recruit | Immediately trigger a hand crewmate's ability. |
-| 저지 Prevent/Block | Cancel an enemy (or boss) card's ability/condition from activating. |
-| 🎲 [Die] | Roll once for the value; some effects let you pick any value 1–5 instead of rolling. |
+These 5 keywords are printed on cards as a small icon + label (see `Icons/`). In the CSVs, every occurrence of the keyword (Korean and English) is wrapped in square brackets — e.g. `[이동]` / `[Move]` — precisely so you can find/replace that exact bracketed token with an `<img>` tag (or equivalent) for the icon. See [Icon reference](#icon-reference-for-text-replacement) below for the exact tokens and image paths.
+
+| Icon | Keyword | Effect |
+|---|---|---|
+| ![Swap](Icons/icon_swap.png) | 교환 Swap | Trade a chosen crewmate card with another player's chosen crewmate. |
+| ![Move](Icons/icon_move.png) | 이동 Move | Choose a crewmate card, move it to any crewmate space. |
+| ![Power Up!](Icons/icon_powerup.png) | 파워업! Power Up! | Place a Power Up token on a crewmate (+1 Power each, stackable). |
+| ![Recruit](Icons/icon_recruit.png) | 영입 Recruit | Immediately trigger a hand crewmate's ability. |
+| ![Prevent](Icons/icon_prevent.png) | 저지 Prevent | Cancel an enemy (or boss) card's ability/condition from activating. |
+
+Two more inline symbols appear throughout the ability text but aren't part of this 5-icon set: 🔥 (the Flame/threat meter, written `[불꽃]`/`[Flame]`) and 🎲 (the die roll, written `[주사위]`/`[Die]` or the 🎲 emoji directly).
 
 ## Setup
 
@@ -69,6 +81,26 @@ Each player picks 1 character (Luffy included by default) and gets 7 Power Up to
 
 - **보스 러시 Boss Rush** — mix boss cards into the enemy deck before shuffling for a harder game; abilities that say "적" (enemy) only affect a boss if they explicitly say "보스."
 - **솔로 모드 Solo mode** — single player uses a fixed 6-card hand instead of the normal draw; enemy effects target your own character; Swap/Move/Recruit abilities get reworded to target yourself.
+
+## Icon reference (for text replacement)
+
+The 3 CSVs never embed images directly — instead, every mention of one of the 5 ability keywords is wrapped in square brackets as plain text. To render icons instead of text, do a literal find/replace of each bracketed token below with an image tag pointing at the corresponding file in `Icons/`.
+
+| Token (Korean) | Token (English) | Icon file |
+|---|---|---|
+| `[교환]` | `[Swap]` | `Icons/icon_swap.png` |
+| `[이동]` | `[Move]` | `Icons/icon_move.png` |
+| `[파워업]` | `[Power Up!]` | `Icons/icon_powerup.png` |
+| `[영입]` | `[Recruit]` | `Icons/icon_recruit.png` |
+| `[저지]` | `[Prevent]` | `Icons/icon_prevent.png` |
+
+Example (HTML): replacing `[Move]` with `<img src="Icons/icon_move.png" alt="Move" height="20">` turns
+
+> `[Move] up to [Die] times.`
+
+into an inline icon followed by the rest of the sentence. Since the replacement is a plain literal string match, it works the same way in a spreadsheet find/replace, a script, or a templating engine.
+
+**Note:** the character name 저지 (Jesus Burgess, in `Enemies/enemies.csv` and `Crewmates/crewmates.csv`) is deliberately left unbracketed — only the verb usage of 저지 (e.g. "저지합니다") was wrapped as `[저지]`, so the character's name is never mistaken for the Prevent icon.
 
 ## Terminology reference (for future extractions)
 
