@@ -1,56 +1,56 @@
 episode_korean,episode_english,power,name_korean,name_english,ability_korean,ability_english,jpg_reference,notes
 알라바스타,Alabasta,1,카루,Karoo,[이동],[Move] [keyword],Karoo.jpg,
-알라바스타,Alabasta,2,더냐바퀴,Deonyabakwi,자신의 캐릭터를 사용하지 않는 무작위 캐릭터로 교체합니다.,Replace your own character with a random character not currently in use.,Deonyabakwi.jpg,Nameplate re-read and confirmed clearly; not a known canon One Piece character (likely a game-original mascot)
-알라바스타,Alabasta,3,호쿠리샤,Hokurisha,쓰러진 동료 1명을 동료 더미에 섞어 넣습니다.,Shuffle 1 fallen crewmate back into the crewmate deck.,Hokurisha.jpg,Nameplate re-read and confirmed clearly; silver-haired man with on/off switch tattoo — identity not matched to a known canon character
-알라바스타,Alabasta,4,비프,Beef,자신의 캐릭터를 [파워업] 합니다.,[Power Up!] your own character.,Beef.jpg,"Nameplate clearly reads 비프 (Beef) - a pun name, not Zeff despite the similar chef design"
-알라바스타,Alabasta,5,본클레이,Bon Clay,"이번 차례 동안, 봉쿠레를 아무 색깔 및 파워로 간주합니다.","This turn, treat Bon Kurei (this card) as any colour and any Power.",Bon_Clay.jpg,
+알라바스타,Alabasta,2,쿵푸듀공,Kung Fu Dugong,자신의 캐릭터를 사용하지 않는 무작위 캐릭터로 교체합니다.,Replace your own character with a random character not currently in use.,Kung_Fu_Dugong.jpg,"Corrected by reading the name badge rotated 90°: it reads 쿵푸듀공 (""Kung Fu Dugong""), a game-original pun name - matches the bandaged seal/dugong art"
+알라바스타,Alabasta,3,쿠레하,Kureha,쓰러진 동료 1명을 동료 더미에 섞어 넣습니다.,Shuffle 1 fallen crewmate back into the crewmate deck.,Kureha.jpg,"Corrected by reading the name badge rotated 90°: it reads 쿠레하 (Dr. Kureha, from Drum Island) - previously misread upright as ""Hokurisha"""
+알라바스타,Alabasta,4,제프,Zeff,자신의 캐릭터를 [파워업] 합니다.,[Power Up!] your own character.,Zeff.jpg,"Corrected by reading the name badge rotated 90°: it reads 제프 (Zeff) - previously misread upright as ""비프/Beef"""
+알라바스타,Alabasta,5,봉쿠레,Bon Kurei,"이번 차례 동안, 봉쿠레를 아무 색깔 및 파워로 간주합니다.","This turn, treat Bon Kurei (this card) as any colour and any Power.",Bon_Clay.jpg,Name spelling refined to match the badge exactly (봉쿠레/Bon Kurei rather than the anglicized Bon Clay) - same character (Mr. 2)
 알라바스타,Alabasta,6,비비,Vivi,[영입],[Recruit] [keyword],Vivi.jpg,
-알라바스타,Alabasta,7,라분,Rabun,라분을 [영입]한 칸에 있는 과거 동료 1명당 🔥을 1씩 낮춥니다.,"For each past crewmate in the space where Rabun (this card) was recruited, lower the Flame by 1.",Rabun.jpg,Name confirmed by cross-checking the ability text's self-reference against the nameplate
-알라바스타,Alabasta,8,내리나,Naerina,다른 플레이어의 캐릭터 1명을 [파워업] 합니다.,[Power Up!] another player's character.,Naerina.jpg,Nameplate re-read; identity not matched to a known canon character
+알라바스타,Alabasta,7,라분,Laboon,라분을 [영입]한 칸에 있는 과거 동료 1명당 🔥을 1씩 낮춥니다.,"For each past crewmate in the space where Laboon (this card) was recruited, lower the Flame by 1.",Laboon.jpg,"Corrected: 라분 is Laboon (the giant whale at Reverse Mountain), not an invented ""Rabun"" - confirmed both by the rotated badge and by the ability text's own self-reference"
+알라바스타,Alabasta,8,돌턴,Dalton,다른 플레이어의 캐릭터 1명을 [파워업] 합니다.,[Power Up!] another player's character.,Dalton.jpg,"Corrected by reading the name badge rotated 90°: it reads 돌턴 (Dalton, the Drum Kingdom commander) - previously misread upright as ""Naerina"""
 알라바스타,Alabasta,9,에이스,Ace,🔥을 절반(소수점 버림)으로 낮춥니다.,Halve the Flame (round down).,Ace.jpg,
 정상결전,Marineford,1,코비,Koby,"루피가 [영입]했다면, 🔥을 🎲만큼 낮춥니다.","If Luffy recruited this, lower the Flame by the [Die] result.",Koby.jpg,
-정상결전,Marineford,2,쥬얼리 보니,Jewelry Bonney,[영입],[Recruit] [keyword],Jewelry_Bonney.jpg,Full name confirmed on a clearer re-read
-정상결전,Marineford,3,벨라,Bella,적 하나를 저지합니다.,[Prevent] one enemy.,Bella.jpg,Nameplate re-read; identity not matched to a known canon character
+정상결전,Marineford,2,쥬얼리 보니,Jewelry Bonney,[영입],[Recruit] [keyword],Jewelry_Bonney.jpg,
+정상결전,Marineford,3,간폴,Ganpol,적 하나를 저지합니다.,[Prevent] one enemy.,Bella.jpg,"Nameplate re-read (rotated) as 간폴; identity not matched to a known canon character. File kept as Bella.jpg for now - rename if a better identification turns up"
 정상결전,Marineford,4,보아 행콕,Boa Hancock,"루피가 [영입]했다면, 적 하나를 격퇴합니다.","If Luffy recruited this, defeat one enemy.",Boa_Hancock.jpg,
-정상결전,Marineford,5,저지,Jesus Burgess,쓰러진 동료 1명을 데려와 손에 듭니다.,Take 1 fallen crewmate and add it to your hand.,Jesus_Burgess_Crewmate.jpg,Confirmed on a clearer re-read; same design as the Jesus Burgess enemy card
+정상결전,Marineford,5,마르코,Marco,쓰러진 동료 1명을 데려와 손에 듭니다.,Take 1 fallen crewmate and add it to your hand.,Marco.jpg,"Corrected by reading the name badge rotated 90°: it reads 마르코 (Marco the Phoenix), not Jesus Burgess - the art was previously mismatched to the similar-looking Jesus Burgess enemy card"
 정상결전,Marineford,6,몽키 D 가프,Monkey D. Garp,다른 현재 동료 1명을 쓰러뜨리고 적 하나를 격퇴합니다.,Defeat 1 other current crewmate and defeat one enemy.,Garp.jpg,
 정상결전,Marineford,7,미호크,Mihawk,이번 차례 동안 현재 동료 1명의 파워를 최대 🎲만큼 높이거나 낮춥니다.,"This turn, raise or lower 1 current crewmate's Power by up to the [Die] result.",Mihawk.jpg,
-정상결전,Marineford,8,센고쿠,Sengoku,자신 또는 다른 플레이어의 캐릭터 1명을 [파워업] 합니다.,[Power Up!] your own or another player's character.,Sengoku.jpg,
+정상결전,Marineford,8,레일리,Silvers Rayleigh,자신 또는 다른 플레이어의 캐릭터 1명을 [파워업] 합니다.,[Power Up!] your own or another player's character.,Rayleigh.jpg,"Corrected by reading the name badge rotated 90°: it reads 레일리 (Silvers Rayleigh), not Sengoku - previously misidentified from the art alone"
 정상결전,Marineford,9,샹크스,Shanks,"🔥을 0으로 되돌립니다. 이번 차례에는 🔥이 높아지지 않습니다.","Reset the Flame to 0. The Flame does not rise this turn.",Shanks.jpg,
-혁명군,Revolutionary Army,1,벨로베티,Belo Betty,현재 동료 중 혁명군 1명당 🔥을 2씩 낮춥니다.,Lower the Flame by 2 for each current Revolutionary Army crewmate.,Belo_Betty.jpg,Confirmed on a clearer re-read
-혁명군,Revolutionary Army,2,코알라,Koala,[교환],[Swap] [keyword],Koala.jpg,"Corrected: nameplate clearly reads 코알라 (Koala), the Revolutionary Army fish-karate fighter — not unidentified"
-혁명군,Revolutionary Army,3,사보 (가면),Sabo (masked disguise),자신의 캐릭터를 [파워업] 합니다.,[Power Up!] your own character.,Sabo_Masked.jpg,
-혁명군,Revolutionary Army,4,곤베,Gonbe,[이동],[Move] [keyword],Gonbe.jpg,Nameplate re-read; identity not matched to a known canon character
-혁명군,Revolutionary Army,5,카라스,Karasu,[영입],[Recruit] [keyword],Karasu.jpg,"Corrected: this is Karasu (crow-masked Revolutionary Army officer), not Inazuma - misidentified in the earlier pass"
+혁명군,Revolutionary Army,1,벨로베티,Belo Betty,현재 동료 중 혁명군 1명당 🔥을 2씩 낮춥니다.,Lower the Flame by 2 for each current Revolutionary Army crewmate.,Belo_Betty.jpg,
+혁명군,Revolutionary Army,2,코알라,Koala,[교환],[Swap] [keyword],Koala.jpg,
+혁명군,Revolutionary Army,3,린드버그,Lindbergh,자신의 캐릭터를 [파워업] 합니다.,[Power Up!] your own character.,Lindbergh.jpg,"Corrected by reading the name badge rotated 90°: it reads 린드버그 (Lindbergh, a Revolutionary Army commander), not Sabo's masked disguise"
+혁명군,Revolutionary Army,4,몰리,Morley,[이동],[Move] [keyword],Morley.jpg,"Corrected by reading the name badge rotated 90°: it reads 몰리 (Morley, the Revolutionary Army giant) - this file previously held the ""Gonbe"" placeholder name"
+혁명군,Revolutionary Army,5,카라스,Karasu,[영입],[Recruit] [keyword],Karasu.jpg,
 혁명군,Revolutionary Army,6,이반코프,Ivankov,이번 차례 동안 아무 현재 동료 1명의 색깔 또는 파워를 바꿉니다.,"This turn, change the colour or Power of any 1 current crewmate.",Ivankov.jpg,
-혁명군,Revolutionary Army,7,몽키 D 드래곤,Monkey D. Dragon,현재 동료를 최대 🎲명까지 버립니다.,Discard up to the [Die] result of current crewmates.,Dragon.jpg,
+혁명군,Revolutionary Army,7,쿠마,Bartholomew Kuma,현재 동료를 최대 🎲명까지 버립니다.,Discard up to the [Die] result of current crewmates.,Kuma.jpg,"Corrected by reading the name badge rotated 90°: it reads 쿠마 (Bartholomew Kuma), not Monkey D. Dragon - this file previously held the ""Dragon"" placeholder name"
 혁명군,Revolutionary Army,8,사보,Sabo,🔥을 절반(소수점 버림)으로 낮춥니다.,Halve the Flame (round down).,Sabo.jpg,
-혁명군,Revolutionary Army,9,모리스,Morley,미확인 (텍스트가 사진에 보이지 않음),Ability text not visible in this scan - the art fills the whole card with no visible text band,Morley.jpg,"Name confirmed (Morley, the scarred Revolutionary Army giant); please rescan this card to capture its ability text"
-드레스로자,Dressrosa,1,레오,Leo,[교환] / [영입],[Swap] / [Recruit] [dual keyword],Leo.jpg,
-드레스로자,Dressrosa,2,만셰리,Mansherry,다른 플레이어의 캐릭터 1명을 [파워업] 합니다.,[Power Up!] another player's character.,Mansherry.jpg,
+혁명군,Revolutionary Army,9,몽키 D 드래곤,Monkey D. Dragon,미확인 (텍스트가 사진에 보이지 않음),Ability text not visible in this scan - the art fills the whole card with no visible text band,Dragon.jpg,"Corrected by reading the name badge rotated 90°: it reads 몽키 D 드래곤 (Monkey D. Dragon) - this file previously held the ""Morley"" placeholder name. Ability text still needs a rescan"
+드레스로자,Dressrosa,1,파파쿠,Papaku,[교환] / [영입],[Swap] / [Recruit] [dual keyword],Papaku.jpg,"Corrected by reading the name badge rotated 90°: it reads 파파쿠, not Leo - identity not matched to a known canon character. This file previously held the ""Leo"" placeholder name"
+드레스로자,Dressrosa,2,맨셸리,Mansherry,다른 플레이어의 캐릭터 1명을 [파워업] 합니다.,[Power Up!] another player's character.,Mansherry.jpg,Name spelling refined on a rotated re-read (맨셸리)
 드레스로자,Dressrosa,3,레베카,Rebecca,[영입],[Recruit] [keyword],Rebecca.jpg,
 드레스로자,Dressrosa,4,비올라,Viola,다른 플레이어 1명의 손에 있는 동료를 전부 봅니다.,Look at all crewmates in 1 other player's hand.,Viola.jpg,
-드레스로자,Dressrosa,5,디아만테,Diamante,"🔥을 🎲만큼 높이고, 그런 다음 🔥을 🎲만큼 낮춥니다.","Raise the Flame by the [Die] result, then lower the Flame by the [Die] result.",Diamante.jpg,
-드레스로자,Dressrosa,6,쿄로스,Kyros,🔥 수치가 🎲보다 낮은 적/보스 하나를 저지합니다.,[Prevent] one enemy/boss whose Flame value is lower than the [Die] result.,Kyros.jpg,Confirmed on a clearer re-read
-드레스로자,Dressrosa,7,트레볼,Trebol,"루피가 [영입]했다면, 이번 차례에는 🔥이 높아지지 않습니다.","If Luffy recruited this, the Flame does not rise this turn.",Trebol.jpg,
+드레스로자,Dressrosa,5,캐번디시,Cavendish,"🔥을 🎲만큼 높이고, 그런 다음 🔥을 🎲만큼 낮춥니다.","Raise the Flame by the [Die] result, then lower the Flame by the [Die] result.",Cavendish.jpg,"Corrected by reading the name badge rotated 90°: it reads 캐번디시 (Cavendish), not Diamante"
+드레스로자,Dressrosa,6,레오,Leo,🔥 수치가 🎲보다 낮은 적/보스 하나를 저지합니다.,[Prevent] one enemy/boss whose Flame value is lower than the [Die] result.,Leo.jpg,"Corrected by reading the name badge rotated 90°: it reads 레오 (Leo), not Kyros - this file previously held the ""Kyros"" placeholder name"
+드레스로자,Dressrosa,7,바르톨로메오,Bartolomeo,"루피가 [영입]했다면, 이번 차례에는 🔥이 높아지지 않습니다.","If Luffy recruited this, the Flame does not rise this turn.",Bartolomeo.jpg,"Corrected by reading the name badge rotated 90°: it reads 바르톨로메오 (Bartolomeo), not Trebol"
 드레스로자,Dressrosa,8,트라팔가 로,Trafalgar Law,[이동] / [교환]을 원하는 조합으로 최대 🎲번까지 합니다.,[Move] / [Swap] in any combination up to the [Die] result of times.,Trafalgar_Law.jpg,
 드레스로자,Dressrosa,9,시라호시,Shirahoshi,모든 적을 [저지]하고 🔥을 🎲만큼 높입니다.,[Prevent] all enemies and raise the Flame by the [Die] result.,Shirahoshi.jpg,
-홀케이크,Whole Cake Island,1,키친,Kitchen,동료 더미 맨 위 동료 1명을 데려옵니다. 그런 다음 모든 플레이어는 자기 손에 있는 동료를 전부 자신의 오른쪽 플레이어에게 넘깁니다.,"Take the top crewmate from the crewmate deck into your hand. Then every player passes all crewmates in their hand to the player on their right.",Kitchen.jpg,Nameplate clearly reads 키친 (Kitchen) - likely a punny Big Mom butler/Homie name rather than a major canon character
-홀케이크,Whole Cake Island,2,파바,Paba,모든 플레이어는 손에서 동료를 1명씩 버린 뒤 동료 더미 맨 위 동료를 새로 1명씩 데려옵니다.,"Every player discards 1 crewmate from hand, then draws a new one from the top of the crewmate deck.",Paba.jpg,Nameplate re-read; identity not matched to a known canon character
-홀케이크,Whole Cake Island,3,키물,Kimul,적 하나를 저지합니다.,[Prevent] one enemy.,Kimul.jpg,Nameplate re-read; lion-headed Big Mom Homie not matched to a known named Homie
-홀케이크,Whole Cake Island,4,샤이론,Shairon,쓰러진 동료 1명당 🔥을 2씩 낮춥니다.,Lower the Flame by 2 for each fallen crewmate.,Shairon.jpg,Nameplate re-read; possibly a Charlotte family member but not confidently matched
+홀케이크,Whole Cake Island,1,키친,Kitchen,동료 더미 맨 위 동료 1명을 데려옵니다. 그런 다음 모든 플레이어는 자기 손에 있는 동료를 전부 자신의 오른쪽 플레이어에게 넘깁니다.,"Take the top crewmate from the crewmate deck into your hand. Then every player passes all crewmates in their hand to the player on their right.",Kitchen.jpg,Nameplate reads 키친 (Kitchen) - likely a punny Big Mom butler/Homie name rather than a major canon character
+홀케이크,Whole Cake Island,2,푸딩,Charlotte Pudding,모든 플레이어는 손에서 동료를 1명씩 버린 뒤 동료 더미 맨 위 동료를 새로 1명씩 데려옵니다.,"Every player discards 1 crewmate from hand, then draws a new one from the top of the crewmate deck.",Pudding.jpg,"Corrected by reading the name badge rotated 90°: it reads 푸딩 (Charlotte Pudding), not ""Paba"""
+홀케이크,Whole Cake Island,3,페콤즈,Pekoms,적 하나를 저지합니다.,[Prevent] one enemy.,Kimul.jpg,"Nameplate re-read (rotated) as 페콤즈, likely Pekoms (Big Mom's lion-mink bodyguard). File kept as Kimul.jpg for now - rename once fully confirmed"
+홀케이크,Whole Cake Island,4,레이주,Reiju,쓰러진 동료 1명당 🔥을 2씩 낮춥니다.,Lower the Flame by 2 for each fallen crewmate.,Reiju.jpg,"Corrected by reading the name badge rotated 90°: it reads 레이주 (Vinsmoke Reiju), not a Charlotte family member"
 홀케이크,Whole Cake Island,5,베포,Bepo,[이동],[Move] [keyword],Bepo.jpg,
-홀케이크,Whole Cake Island,6,캐롯,Carrot,2번 [영입]합니다.,[Recruit] 2 times.,Carrot.jpg,
+홀케이크,Whole Cake Island,6,캐럿,Carrot,2번 [영입]합니다.,[Recruit] 2 times.,Carrot.jpg,
 홀케이크,Whole Cake Island,7,페드로,Pedro,페드로를 쓰러뜨리고 모든 적을 저지합니다.,Knock down Pedro (this card) and prevent all enemies.,Pedro.jpg,
-홀케이크,Whole Cake Island,8,귀마롱,Gwimarong,자신의 캐릭터를 [파워업] 합니다.,[Power Up!] your own character.,Gwimarong.jpg,Nameplate re-read; lion-headed Big Mom Pirate not matched to a known canon character
+홀케이크,Whole Cake Island,8,네코마무시,Nekomamushi,자신의 캐릭터를 [파워업] 합니다.,[Power Up!] your own character.,Nekomamushi.jpg,"Corrected by reading the name badge rotated 90°: it reads 네코마무시 (Nekomamushi, the cat mink Shogun of Zou), not an invented ""Gwimarong"""
 홀케이크,Whole Cake Island,9,이누아라시,Inuarashi,[영입],[Recruit] [keyword],Inuarashi.jpg,
 와노쿠니,Wano Country,1,코무라사키,Komurasaki,"다른 플레이어의 캐릭터 1명을 [파워업] 하고, [영입]합니다.",[Power Up!] another player's character and [Recruit].,Komurasaki.jpg,
-와노쿠니,Wano Country,2,카마조에,Kamajoe,[교환],[Swap] [keyword],Kamajoe.jpg,Nameplate re-read; bald elderly man with blue steam effect not matched to a known canon character
-와노쿠니,Wano Country,3,킬러,Killer,[이동],[Move] [keyword],Killer.jpg,
+와노쿠니,Wano Country,2,효고로,Hyogoro,[교환],[Swap] [keyword],Hyogoro.jpg,"Corrected by reading the name badge rotated 90°: it reads 효고로 (Hyogoro, the elderly ex-yakuza boss of Wano), not an invented ""Kamajoe"""
+와노쿠니,Wano Country,3,드레이크,X Drake,[이동],[Move] [keyword],X_Drake.jpg,"Corrected by reading the name badge rotated 90°: it reads 드레이크 (X Drake), not Killer"
 와노쿠니,Wano Country,4,카와마츠,Kawamatsu,[이동],[Move] [keyword],Kawamatsu.jpg,
-와노쿠니,Wano Country,5,덴지로,Denjiro,미확인 (텍스트가 사진에 보이지 않음),Ability text not visible in this scan - the art fills the whole card with no visible text band,Denjiro.jpg,"Name confirmed (Denjiro); please rescan this card to capture its ability text"
-와노쿠니,Wano Country,6,기쿠,Kiku,미확인 (텍스트가 사진에 보이지 않음),Ability text not visible in this scan - the art fills the whole card with no visible text band,Kiku.jpg,"Name confirmed (Kiku); please rescan this card to capture its ability text"
-와노쿠니,Wano Country,7,유스타스 키드,Eustass Kid,버려져 있는 동료를 최대 🎲명까지 선택해 동료 더미에 섞어 넣습니다.,Choose up to the [Die] result of discarded crewmates and shuffle them into the crewmate deck.,Eustass_Kid.jpg,
+와노쿠니,Wano Country,5,킨에몬,Kinemon,미확인 (텍스트가 사진에 보이지 않음),Ability text not visible in this scan - the art fills the whole card with no visible text band,Kinemon.jpg,"Corrected by reading the name badge rotated 90°: it reads 킨에몬 (Kinemon), not Denjiro. Ability text still needs a rescan"
+와노쿠니,Wano Country,6,키쿠노조,Kiku,미확인 (텍스트가 사진에 보이지 않음),Ability text not visible in this scan - the art fills the whole card with no visible text band,Kiku.jpg,"Full name confirmed on a rotated re-read: 키쿠노조 (Kikunojo/Kiku). Ability text still needs a rescan"
+와노쿠니,Wano Country,7,키드,Eustass Kid,버려져 있는 동료를 최대 🎲명까지 선택해 동료 더미에 섞어 넣습니다.,Choose up to the [Die] result of discarded crewmates and shuffle them into the crewmate deck.,Eustass_Kid.jpg,
 와노쿠니,Wano Country,8,야마토,Yamato,보스 하나를 저지합니다.,[Prevent] one boss.,Yamato.jpg,
-와노쿠니,Wano Country,9,카이도 (용),Kaido (Dragon form),"자신의 캐릭터를 [파워업] 하고, [영입]합니다.",[Power Up!] your own character and [Recruit].,Kaido_Dragon_Form.jpg,
+와노쿠니,Wano Country,9,모모노스케,Momonosuke (Dragon form),"자신의 캐릭터를 [파워업] 하고, [영입]합니다.",[Power Up!] your own character and [Recruit].,Momonosuke_Dragon_Form.jpg,"Corrected by reading the name badge rotated 90°: it reads 모모노스케 (Momonosuke, Kinemon's son, in his dragon transformation), not Kaido"
 -,-,-,-,Card Back,-,-,Card_Back.jpg,
