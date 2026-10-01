@@ -1,7 +1,7 @@
 type,threat_korean,threat_english,name_korean,name_english,on_reveal_korean,on_reveal_english,defeat_condition_korean,defeat_condition_english,bounty,jpg_reference
 enemy,1,1,킹,King,,,모든 동료의 파워가 오름차순 또는 내림차순으로 연속된 숫자일 것(예: 1-2-3-4-5 또는 5-4-3-2-1).,"All crewmates' Power form a run of consecutive numbers, ascending or descending (e.g. 1-2-3-4-5 or 5-4-3-2-1).",4000000,King.jpg
 enemy,1,1,후지토라,Fujitora,,,동료 4명의 색깔이 서로 같을 것.,4 crewmates share the same colour.,3000000,Fujitora.jpg
-enemy,1,1,저지,Jesus Burgess,,,모든 동료의 파워 합계가 27 이상이면서 적어도 1명은 홀케이크일 것.,All crewmates' total Power is 27 or more and at least 1 is Whole Cake (Island).,2000000,Jesus_Burgess.jpg
+enemy,1,1,저지,Judge,,,모든 동료의 파워 합계가 27 이상이면서 적어도 1명은 홀케이크일 것.,All crewmates' total Power is 27 or more and at least 1 is Whole Cake (Island).,2000000,Judge.jpg
 enemy,1,1,크로,Kuro,,,색깔이 같은 동료 2명이 서로 인접해 있을 것.,2 crewmates of the same colour are adjacent to each other.,1000000,Kuro.jpg
 enemy,2,2,오로치,Orochi,,,와노쿠니 동료 3명이 서로 인접해 있을 것.,3 Wano Country crewmates are adjacent to each other.,3000000,Orochi.jpg
 enemy,2,2,벳지,Bege,,,동료 3명의 파워가 서로 같을 것.,3 crewmates have equal Power to each other.,2000000,Bege.jpg

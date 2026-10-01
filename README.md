@@ -122,7 +122,7 @@ Example (HTML): replacing `[Move]` with `<img src="Icons/move_idong.svg" alt="Mo
 
 into an inline icon followed by the rest of the sentence. Since the replacement is a plain literal string match, it works the same way in a spreadsheet find/replace, a script, or a templating engine.
 
-**Note:** the character name 저지 (Jesus Burgess, in `Enemies/enemies.csv` and `Crewmates/crewmates.csv`) is deliberately left unbracketed — only the verb usage of 저지 (e.g. "저지합니다") was wrapped as `[저지]`, so the character's name is never mistaken for the Prevent icon.
+**Note:** the character name 저지 (Judge, in `Enemies/enemies.csv`) is deliberately left unbracketed — only the verb usage of 저지 (e.g. "저지합니다") was wrapped as `[저지]`, so the character's name is never mistaken for the Prevent icon.
 
 ## Terminology reference (for future extractions)
 

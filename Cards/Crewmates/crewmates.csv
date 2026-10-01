@@ -10,9 +10,9 @@ episode_korean,episode_english,power,name_korean,name_english,ability_korean,abi
 알라바스타,Alabasta,9,에이스,Ace,🔥을 절반(소수점 버림)으로 낮춥니다.,Halve the Flame (round down).,Ace.jpg,
 정상결전,Marineford,1,코비,Koby,"루피가 [영입]했다면, 🔥을 🎲만큼 낮춥니다.","If Luffy recruited this, lower the Flame by the [Die] result.",Koby.jpg,
 정상결전,Marineford,2,쥬얼리 보니,Jewelry Bonney,[영입],[Recruit] [keyword],Jewelry_Bonney.jpg,
-정상결전,Marineford,3,간폴,Ganpol,적 하나를 저지합니다.,[Prevent] one enemy.,Bella.jpg,"Nameplate re-read (rotated) as 간폴; identity not matched to a known canon character. File kept as Bella.jpg for now - rename if a better identification turns up"
+정상결전,Marineford,3,간폴,Ganpol,적 하나를 저지합니다.,[Prevent] one enemy.,Ganpol.jpg,Nameplate reads 간폴 (Ganpol) - confirmed by the user; not a "Bella"
 정상결전,Marineford,4,보아 행콕,Boa Hancock,"루피가 [영입]했다면, 적 하나를 격퇴합니다.","If Luffy recruited this, defeat one enemy.",Boa_Hancock.jpg,
-정상결전,Marineford,5,마르코,Marco,쓰러진 동료 1명을 데려와 손에 듭니다.,Take 1 fallen crewmate and add it to your hand.,Marco.jpg,"Corrected by reading the name badge rotated 90°: it reads 마르코 (Marco the Phoenix), not Jesus Burgess - the art was previously mismatched to the similar-looking Jesus Burgess enemy card"
+정상결전,Marineford,5,마르코,Marco,쓰러진 동료 1명을 데려와 손에 듭니다.,Take 1 fallen crewmate and add it to your hand.,Marco.jpg,"Corrected by reading the name badge rotated 90°: it reads 마르코 (Marco the Phoenix), not Judge - the art was previously mismatched to the similar-looking Judge enemy card"
 정상결전,Marineford,6,몽키 D 가프,Monkey D. Garp,다른 현재 동료 1명을 쓰러뜨리고 적 하나를 격퇴합니다.,Defeat 1 other current crewmate and defeat one enemy.,Garp.jpg,
 정상결전,Marineford,7,미호크,Mihawk,이번 차례 동안 현재 동료 1명의 파워를 최대 🎲만큼 높이거나 낮춥니다.,"This turn, raise or lower 1 current crewmate's Power by up to the [Die] result.",Mihawk.jpg,
 정상결전,Marineford,8,레일리,Silvers Rayleigh,자신 또는 다른 플레이어의 캐릭터 1명을 [파워업] 합니다.,[Power Up!] your own or another player's character.,Rayleigh.jpg,"Corrected by reading the name badge rotated 90°: it reads 레일리 (Silvers Rayleigh), not Sengoku - previously misidentified from the art alone"
@@ -26,7 +26,7 @@ episode_korean,episode_english,power,name_korean,name_english,ability_korean,abi
 혁명군,Revolutionary Army,7,쿠마,Bartholomew Kuma,현재 동료를 최대 🎲명까지 버립니다.,Discard up to the [Die] result of current crewmates.,Kuma.jpg,"Corrected by reading the name badge rotated 90°: it reads 쿠마 (Bartholomew Kuma), not Monkey D. Dragon - this file previously held the ""Dragon"" placeholder name"
 혁명군,Revolutionary Army,8,사보,Sabo,🔥을 절반(소수점 버림)으로 낮춥니다.,Halve the Flame (round down).,Sabo.jpg,
 혁명군,Revolutionary Army,9,몽키 D 드래곤,Monkey D. Dragon,미확인 (텍스트가 사진에 보이지 않음),Ability text not visible in this scan - the art fills the whole card with no visible text band,Dragon.jpg,"Corrected by reading the name badge rotated 90°: it reads 몽키 D 드래곤 (Monkey D. Dragon) - this file previously held the ""Morley"" placeholder name. Ability text still needs a rescan"
-드레스로자,Dressrosa,1,파파쿠,Papaku,[교환] / [영입],[Swap] / [Recruit] [dual keyword],Papaku.jpg,"Corrected by reading the name badge rotated 90°: it reads 파파쿠, not Leo - identity not matched to a known canon character. This file previously held the ""Leo"" placeholder name"
+드레스로자,Dressrosa,1,파파쿠,Pappug,[교환] / [영입],[Swap] / [Recruit] [dual keyword],Pappug.jpg,"Confirmed by the user: パッパグ (Pappug), the surgeonfish from Fish-Man Island - not Leo. This file previously held the ""Leo"" placeholder name"
 드레스로자,Dressrosa,2,맨셸리,Mansherry,다른 플레이어의 캐릭터 1명을 [파워업] 합니다.,[Power Up!] another player's character.,Mansherry.jpg,Name spelling refined on a rotated re-read (맨셸리)
 드레스로자,Dressrosa,3,레베카,Rebecca,[영입],[Recruit] [keyword],Rebecca.jpg,
 드레스로자,Dressrosa,4,비올라,Viola,다른 플레이어 1명의 손에 있는 동료를 전부 봅니다.,Look at all crewmates in 1 other player's hand.,Viola.jpg,
@@ -35,7 +35,7 @@ episode_korean,episode_english,power,name_korean,name_english,ability_korean,abi
 드레스로자,Dressrosa,7,바르톨로메오,Bartolomeo,"루피가 [영입]했다면, 이번 차례에는 🔥이 높아지지 않습니다.","If Luffy recruited this, the Flame does not rise this turn.",Bartolomeo.jpg,"Corrected by reading the name badge rotated 90°: it reads 바르톨로메오 (Bartolomeo), not Trebol"
 드레스로자,Dressrosa,8,트라팔가 로,Trafalgar Law,[이동] / [교환]을 원하는 조합으로 최대 🎲번까지 합니다.,[Move] / [Swap] in any combination up to the [Die] result of times.,Trafalgar_Law.jpg,
 드레스로자,Dressrosa,9,시라호시,Shirahoshi,모든 적을 [저지]하고 🔥을 🎲만큼 높입니다.,[Prevent] all enemies and raise the Flame by the [Die] result.,Shirahoshi.jpg,
-홀케이크,Whole Cake Island,1,키친,Kitchen,동료 더미 맨 위 동료 1명을 데려옵니다. 그런 다음 모든 플레이어는 자기 손에 있는 동료를 전부 자신의 오른쪽 플레이어에게 넘깁니다.,"Take the top crewmate from the crewmate deck into your hand. Then every player passes all crewmates in their hand to the player on their right.",Kitchen.jpg,Nameplate reads 키친 (Kitchen) - likely a punny Big Mom butler/Homie name rather than a major canon character
+홀케이크,Whole Cake Island,1,모건스,Morgans,동료 더미 맨 위 동료 1명을 데려옵니다. 그런 다음 모든 플레이어는 자기 손에 있는 동료를 전부 자신의 오른쪽 플레이어에게 넘깁니다.,"Take the top crewmate from the crewmate deck into your hand. Then every player passes all crewmates in their hand to the player on their right.",Morgans.jpg,
 홀케이크,Whole Cake Island,2,푸딩,Charlotte Pudding,모든 플레이어는 손에서 동료를 1명씩 버린 뒤 동료 더미 맨 위 동료를 새로 1명씩 데려옵니다.,"Every player discards 1 crewmate from hand, then draws a new one from the top of the crewmate deck.",Pudding.jpg,"Corrected by reading the name badge rotated 90°: it reads 푸딩 (Charlotte Pudding), not ""Paba"""
 홀케이크,Whole Cake Island,3,페콤즈,Pekoms,적 하나를 저지합니다.,[Prevent] one enemy.,Kimul.jpg,"Nameplate re-read (rotated) as 페콤즈, likely Pekoms (Big Mom's lion-mink bodyguard). File kept as Kimul.jpg for now - rename once fully confirmed"
 홀케이크,Whole Cake Island,4,레이주,Reiju,쓰러진 동료 1명당 🔥을 2씩 낮춥니다.,Lower the Flame by 2 for each fallen crewmate.,Reiju.jpg,"Corrected by reading the name badge rotated 90°: it reads 레이주 (Vinsmoke Reiju), not a Charlotte family member"
